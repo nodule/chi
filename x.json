@@ -1,0 +1,105 @@
+{
+  "name": "object",
+  "description": "Chi for Chiχ",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodule/chi.git"
+  },
+  "nodes": [
+    {
+      "name": "create",
+      "ns": "chi",
+      "description": "Creates Chi",
+      "phrases": {
+        "active": "Creating Chi"
+      },
+      "expose": [
+        "chi",
+        "self"
+      ],
+      "ports": {
+        "input": {
+          "in": {
+            "title": "Input",
+            "type": "any"
+          },
+          "color": {
+            "title": "Color",
+            "type": "any"
+          }
+        },
+        "output": {
+          "out": {
+            "title": "out",
+            "type": "any"
+          }
+        }
+      },
+      "fn": "chi.create(input.color, input.in, self);\noutput.out = input.in;\n"
+    },
+    {
+      "name": "drop",
+      "ns": "chi",
+      "description": "Drop Chi",
+      "phrases": {
+        "active": "Dropping {{input.color}} Chi"
+      },
+      "expose": [
+        "chi",
+        "self"
+      ],
+      "ports": {
+        "input": {
+          "in": {
+            "title": "Input",
+            "type": "any"
+          },
+          "color": {
+            "title": "Color",
+            "type": "string"
+          }
+        },
+        "output": {
+          "out": {
+            "title": "out",
+            "type": "any"
+          }
+        }
+      },
+      "fn": "// for now, input is disregarded\noutput.out = chi.drop(input.color, self);\n"
+    },
+    {
+      "name": "read",
+      "ns": "chi",
+      "description": "Read Chi",
+      "phrases": {
+        "active": "Reading Chi"
+      },
+      "expose": [
+        "chi",
+        "self"
+      ],
+      "ports": {
+        "input": {
+          "in": {
+            "title": "Input",
+            "type": "any"
+          },
+          "color": {
+            "title": "Color",
+            "type": "string"
+          }
+        },
+        "output": {
+          "out": {
+            "title": "out",
+            "type": "any"
+          }
+        }
+      },
+      "fn": "// for now, input is disregarded\noutput.out = chi.read(input.color, self);\n"
+    }
+  ],
+  "twigs": []
+}

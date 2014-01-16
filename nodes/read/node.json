@@ -5,7 +5,7 @@
   "phrases": {
     "active": "Reading Chi"
   },
-  "expose": ['chi', 'self'],
+  "expose": ["chi", "self"],
   "ports": {
     "input": {
       "in": {

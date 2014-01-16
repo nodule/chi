@@ -1,0 +1,27 @@
+{
+  "name": "create",
+  "ns": "chi",
+  "description": "Creates Chi",
+  "phrases": {
+    "active": "Creating Chi"
+  },
+  "expose": ['chi', 'self'],
+  "ports": {
+    "input": {
+      "in": {
+        "title": "Input",
+        "type": "any"
+      },
+      "color": {
+        "title": "Color",
+        "type": "any"
+      }
+    },
+    "output": {
+      "out": {
+        "title": "out",
+        "type": "any"
+      }
+    }
+  }
+}

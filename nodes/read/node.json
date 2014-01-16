@@ -1,0 +1,27 @@
+{
+  "name": "read",
+  "ns": "chi",
+  "description": "Read Chi",
+  "phrases": {
+    "active": "Reading Chi"
+  },
+  "expose": ['chi', 'self'],
+  "ports": {
+    "input": {
+      "in": {
+        "title": "Input",
+        "type": "any"
+      },
+      "color": {
+        "title": "Color",
+        "type": "string"
+      }
+    },
+    "output": {
+      "out": {
+        "title": "out",
+        "type": "any"
+      }
+    }
+  }
+}

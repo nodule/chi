@@ -1,0 +1,27 @@
+{
+  "name": "collect",
+  "ns": "chi",
+  "description": "Collect Chi",
+  "phrases": {
+    "active": "Collection Chi"
+  },
+  "expose": ["chi", "self"],
+  "ports": {
+    "input": {
+      "in": {
+        "title": "Input",
+        "type": "any"
+      },
+      "color": {
+        "title": "Color",
+        "type": "string"
+      }
+    },
+    "output": {
+      "out": {
+        "title": "out",
+        "type": "any"
+      }
+    }
+  }
+}

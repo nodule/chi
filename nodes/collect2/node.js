@@ -1,15 +1,11 @@
 on.input.in1 = function() {
-  console.log('in1 start', x, state);
   var id = x[state.color];
 
   if(!state[id]) state[id] = {};
 
   state[id].out1 = data;
-  console.log('in1 out1 set', x, state);
 
-  if(Object.keys(state[id]) === 2) {
-
-    console.log('in1 sending away', x, state);
+  if(Object.keys(state[id]).length === 2) {
 
     // send them out in correct pairs.
     output({
@@ -23,17 +19,13 @@ on.input.in1 = function() {
 
 on.input.in2 = function() {
 
-  console.log('in2 start', x, state);
   var id = x[state.color];
 
   if(!state[id]) state[id] = {};
 
   state[id].out2 = data;
-  console.log('in2 out2 set', x, state);
 
-  if(Object.keys(state[id]) === 2) {
-
-    console.log('in2 sending away', x, state);
+  if(Object.keys(state[id]).length === 2) {
 
     // send them out in correct pairs.
     output({

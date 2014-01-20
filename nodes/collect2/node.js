@@ -1,5 +1,5 @@
 on.input.in1 = function() {
-
+  console.log(x, state);
   var id = x[state.color];
 
   if(!state[id]) state[id] = {};
@@ -20,6 +20,7 @@ on.input.in1 = function() {
 
 on.input.in2 = function() {
 
+  console.log(x, state);
   var id = x[state.color];
 
   if(!state[id]) state[id] = {};

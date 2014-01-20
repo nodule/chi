@@ -1,5 +1,5 @@
-var fn = function() {
-  return function(target) {
+var fn = function(target) {
+  return function() {
 
     if(!state[chi.id]) state[chi.id] = {};
 

@@ -10,12 +10,10 @@ on.input.in1 = function() {
   if(Object.keys(state[id]).length === 2) {
 
     // send them out in correct pairs.
-    output({
-      out1: state[id].out1,
-      out2: state[id].out2
-    });
+    console.log('in1 sending output', state[id]);
+    output(state[id]);
 
-    delete state[id];
+    // delete state[id];
   }
 };
 
@@ -31,13 +29,11 @@ on.input.in2 = function() {
 
   if(Object.keys(state[id]).length === 2) {
 
+     console.log('in2 sending output', state[id]);
     // send them out in correct pairs.
-    output({
-      out1: state[id].out1,
-      out2: state[id].out2
-    });
+    output(state[id]);
 
-    delete state[id];
+    // delete state[id];
   }
 };
 

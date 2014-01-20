@@ -41,6 +41,7 @@
       "phrases": {
         "active": "Collecting"
       },
+      "type": "async",
       "description": "Collect Chi 2",
       "ns": "chi",
       "name": "collect2",

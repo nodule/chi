@@ -2,6 +2,7 @@
   "name": "collect2",
   "ns": "chi",
   "description": "Collect Chi 2",
+  "type": "async",
   "phrases": {
     "active": "Collecting"
   },

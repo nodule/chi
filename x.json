@@ -44,7 +44,7 @@
       "description": "Collect Chi 2",
       "ns": "chi",
       "name": "collect2",
-      "fn": "// for now, input is disregarded\n/**\n *\n * Ok what I miss overhere is the information\n * of the amount of connections, which is internal\n * knowledge\n *\n * But since this is _our_ process there is\n * actually not much reason not to give that information\n *\n */\n\n// ok, could bind the required information to this\n// Need access to the data\n// Need access to the amount of connections\n// Need access to chi\n// Need access to state\n//\n// parameters(input, state, chi, source)\n//\n// Ok, what we do is collect incomming and if\n// we have\nstate = {\n};\nvar fn = function() {\n  return function(target) {\n\n    if(!state[chi.id]) state[chi.id] = {};\n\n    state[chi.id][target] = chi.read(input.color, self);\n\n    if(Object.keys(state[chi.id]) === 2) {\n\n      // send them out in correct pairs.\n      output(state[chi.id]);\n\n      delete state[chi.id];\n    }\n\n  };\n});\n\non.input.in1 = fn('out1');\non.input.in2 = fn('out2');\n"
+      "fn": "var fn = function() {\n  return function(target) {\n\n    if(!state[chi.id]) state[chi.id] = {};\n\n    state[chi.id][target] = chi.read(input.color, self);\n\n    if(Object.keys(state[chi.id]) === 2) {\n\n      // send them out in correct pairs.\n      output(state[chi.id]);\n\n      delete state[chi.id];\n    }\n\n  }\n};\n\non.input.in1 = fn('out1');\non.input.in2 = fn('out2');\n"
     },
     {
       "ports": {

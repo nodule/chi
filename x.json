@@ -45,7 +45,7 @@
       "description": "Collect Chi 2",
       "ns": "chi",
       "name": "collect2",
-      "fn": "var fn = function(target) {\n  return function() {\n\n    if(!state[chi.id]) state[chi.id] = {};\n\n    state[chi.id][target] = chi.read(state.color, self);\n\n    if(Object.keys(state[chi.id]) === 2) {\n\n      // send them out in correct pairs.\n      output(state[chi.id]);\n\n      delete state[chi.id];\n    }\n\n  }\n};\n\non.input.in1   = fn('out1');\non.input.in2   = fn('out2');\non.input.color = function() {\n  // TODO: I want this logic just be handled the\n  // default way and not having to define this.\n  // problem is that context doesn't work now\n  // and persist is irrelevant now btw.\n  // since we keep our own state\n  state['color'] = data;\n\n};\n"
+      "fn": "on.input.in1 = function() {\n\n  if(!state[chi.id]) state[chi.id] = {};\n\n  state[chi.id]['out1'] = chi.read(state.color, self);\n\n  if(Object.keys(state[chi.id]) === 2) {\n\n    // send them out in correct pairs.\n    output(state[chi.id]);\n\n    delete state[chi.id];\n  }\n}\n\non.input.in2 = function() {\n\n  if(!state[chi.id]) state[chi.id] = {};\n\n  state[chi.id]['out2'] = chi.read(state.color, self);\n\n  if(Object.keys(state[chi.id]) === 2) {\n\n    // send them out in correct pairs.\n    output(state[chi.id]);\n\n    delete state[chi.id];\n  }\n}\n\non.input.color = function() {\n  // TODO: I want this logic just be handled the\n  // default way and not having to define this.\n  // problem is that context doesn't work now\n  // and persist is irrelevant now btw.\n  // since we keep our own state\n  state['color'] = data;\n\n};\n"
     },
     {
       "ports": {

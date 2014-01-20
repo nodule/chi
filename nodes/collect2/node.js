@@ -1,23 +1,33 @@
-var fn = function(target) {
-  return function() {
+on.input.in1 = function() {
 
-    if(!state[chi.id]) state[chi.id] = {};
+  if(!state[chi.id]) state[chi.id] = {};
 
-    state[chi.id][target] = chi.read(state.color, self);
+  state[chi.id]['out1'] = chi.read(state.color, self);
 
-    if(Object.keys(state[chi.id]) === 2) {
+  if(Object.keys(state[chi.id]) === 2) {
 
-      // send them out in correct pairs.
-      output(state[chi.id]);
+    // send them out in correct pairs.
+    output(state[chi.id]);
 
-      delete state[chi.id];
-    }
-
+    delete state[chi.id];
   }
-};
+}
 
-on.input.in1   = fn('out1');
-on.input.in2   = fn('out2');
+on.input.in2 = function() {
+
+  if(!state[chi.id]) state[chi.id] = {};
+
+  state[chi.id]['out2'] = chi.read(state.color, self);
+
+  if(Object.keys(state[chi.id]) === 2) {
+
+    // send them out in correct pairs.
+    output(state[chi.id]);
+
+    delete state[chi.id];
+  }
+}
+
 on.input.color = function() {
   // TODO: I want this logic just be handled the
   // default way and not having to define this.

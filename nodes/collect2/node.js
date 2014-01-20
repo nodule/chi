@@ -1,32 +1,42 @@
 on.input.in1 = function() {
 
-  if(!state[chi.id]) state[chi.id] = {};
+  var id = x[state.color];
 
-  state[chi.id]['out1'] = chi.read(state.color, self);
+  if(!state[id]) state[id] = {};
 
-  if(Object.keys(state[chi.id]) === 2) {
+  state[id].out1 = data;
+
+  if(Object.keys(state[id]) === 2) {
 
     // send them out in correct pairs.
-    output(state[chi.id]);
+    output({
+      out1: state[id].out1,
+      out2: state[id].out2
+    });
 
-    delete state[chi.id];
+    delete state[id];
   }
-}
+};
 
 on.input.in2 = function() {
 
-  if(!state[chi.id]) state[chi.id] = {};
+  var id = x[state.color];
 
-  state[chi.id]['out2'] = chi.read(state.color, self);
+  if(!state[id]) state[id] = {};
 
-  if(Object.keys(state[chi.id]) === 2) {
+  state[id].out2 = data;
+
+  if(Object.keys(state[id]) === 2) {
 
     // send them out in correct pairs.
-    output(state[chi.id]);
+    output({
+      out1: state[id].out1,
+      out2: state[id].out2
+    });
 
-    delete state[chi.id];
+    delete state[id];
   }
-}
+};
 
 on.input.color = function() {
   // TODO: I want this logic just be handled the
@@ -34,6 +44,6 @@ on.input.color = function() {
   // problem is that context doesn't work now
   // and persist is irrelevant now btw.
   // since we keep our own state
-  state['color'] = data;
+  state.color = data;
 
 };

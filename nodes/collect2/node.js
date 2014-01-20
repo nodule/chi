@@ -5,12 +5,9 @@ on.input.in1 = function() {
 
   state[id].out1 = data;
 
-  console.log('keys in2 state', id, Object.keys(state[id]));
-
   if(Object.keys(state[id]).length === 2) {
 
     // send them out in correct pairs.
-    console.log('in1 sending output', state[id]);
     output(state[id]);
 
     // delete state[id];
@@ -25,11 +22,8 @@ on.input.in2 = function() {
 
   state[id].out2 = data;
 
-  console.log('keys in2 state', id, Object.keys(state[id]));
-
   if(Object.keys(state[id]).length === 2) {
 
-     console.log('in2 sending output', state[id]);
     // send them out in correct pairs.
     output(state[id]);
 

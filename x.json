@@ -61,10 +61,6 @@
           "xin": {
             "title": "Group IN",
             "type": "any"
-          },
-          "color": {
-            "title": "Color",
-            "type": "string"
           }
         },
         "output": {

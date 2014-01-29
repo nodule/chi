@@ -1,14 +1,19 @@
 {
-  "name": "collect",
+  "name": "collect2",
   "ns": "chi",
-  "description": "Collect Chi",
+  "description": "Collect Chi 2",
+  "type": "async",
   "phrases": {
-    "active": "Collection Chi"
+    "active": "Collecting"
   },
   "expose": ["chi", "self"],
   "ports": {
     "input": {
-      "in": {
+      "in1": {
+        "title": "Input",
+        "type": "any"
+      },
+      "in2": {
         "title": "Input",
         "type": "any"
       },
@@ -18,8 +23,12 @@
       }
     },
     "output": {
-      "out": {
-        "title": "out",
+      "out1": {
+        "title": "Out 1",
+        "type": "any"
+      },
+      "out2": {
+        "title": "Out 2",
         "type": "any"
       }
     }

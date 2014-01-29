@@ -17,6 +17,10 @@
         "title": "Input",
         "type": "any"
       },
+      "xin": {
+        "title": "Group IN",
+        "type": "any"
+      },
       "color": {
         "title": "Color",
         "type": "string"
@@ -25,10 +29,12 @@
     "output": {
       "out1": {
         "title": "Out 1",
+        "group": "Output",
         "type": "any"
       },
       "out2": {
         "title": "Out 2",
+        "group": "Output",
         "type": "any"
       }
     }

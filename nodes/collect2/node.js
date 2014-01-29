@@ -1,5 +1,5 @@
 on.input.in1 = function() {
-  var id = x[state.color];
+  var id = x[state.gid];
 
   if(!state[id]) state[id] = {};
 
@@ -16,7 +16,7 @@ on.input.in1 = function() {
 
 on.input.in2 = function() {
 
-  var id = x[state.color];
+  var id = x[state.gid];
 
   if(!state[id]) state[id] = {};
 
@@ -31,12 +31,12 @@ on.input.in2 = function() {
   }
 };
 
-on.input.color = function() {
-  // TODO: I want this logic just be handled the
-  // default way and not having to define this.
-  // problem is that context doesn't work now
-  // and persist is irrelevant now btw.
-  // since we keep our own state
-  state.color = data;
-
+on.input.xin = function() {
+  if(!data.complete) {
+    state.gid = data.gid;
+    state.complete = false;
+  } else {
+    state.complete = true;
+    state.l = data.items.length;
+  }
 };

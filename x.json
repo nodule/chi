@@ -50,6 +50,52 @@
     {
       "ports": {
         "input": {
+          "in1": {
+            "title": "Input",
+            "type": "any"
+          },
+          "in2": {
+            "title": "Input",
+            "type": "any"
+          },
+          "xin": {
+            "title": "Group IN",
+            "type": "any"
+          },
+          "color": {
+            "title": "Color",
+            "type": "string"
+          }
+        },
+        "output": {
+          "out1": {
+            "title": "Out 1",
+            "group": "Output",
+            "type": "any"
+          },
+          "out2": {
+            "title": "Out 2",
+            "group": "Output",
+            "type": "any"
+          }
+        }
+      },
+      "expose": [
+        "chi",
+        "self"
+      ],
+      "phrases": {
+        "active": "Collecting"
+      },
+      "type": "async",
+      "description": "Collect Chi 2",
+      "ns": "chi",
+      "name": "collect2",
+      "fn": "on.input.in1 = function() {\n  var id = x[state.gid];\n\n  if(!state[id]) state[id] = {};\n\n  state[id].out1 = data;\n\n  if(Object.keys(state[id]).length === 2) {\n\n    // send them out in correct pairs.\n    output(state[id]);\n\n    // delete state[id];\n  }\n};\n\non.input.in2 = function() {\n\n  var id = x[state.gid];\n\n  if(!state[id]) state[id] = {};\n\n  state[id].out2 = data;\n\n  if(Object.keys(state[id]).length === 2) {\n\n    // send them out in correct pairs.\n    output(state[id]);\n\n    // delete state[id];\n  }\n};\n\non.input.xin = function() {\n  if(!data.complete) {\n    state.gid = data.gid;\n    state.complete = false;\n  } else {\n    state.complete = true;\n    state.l = data.items.length;\n  }\n};\n"
+    },
+    {
+      "ports": {
+        "input": {
           "in": {
             "title": "Input",
             "type": "any"

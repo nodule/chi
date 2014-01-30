@@ -43,9 +43,10 @@
       },
       "type": "async",
       "description": "Collect Chi 2",
+      "title": "Collect 2",
       "ns": "chi",
       "name": "collect2",
-      "fn": "on.input.in1 = function() {\n  var id = x[state.color];\n\n  if(!state[id]) state[id] = {};\n\n  state[id].out1 = data;\n\n  if(Object.keys(state[id]).length === 2) {\n\n    // send them out in correct pairs.\n    output(state[id]);\n\n    // delete state[id];\n  }\n};\n\non.input.in2 = function() {\n\n  var id = x[state.color];\n\n  if(!state[id]) state[id] = {};\n\n  state[id].out2 = data;\n\n  if(Object.keys(state[id]).length === 2) {\n\n    // send them out in correct pairs.\n    output(state[id]);\n\n    // delete state[id];\n  }\n};\n\non.input.color = function() {\n  // TODO: I want this logic just be handled the\n  // default way and not having to define this.\n  // problem is that context doesn't work now\n  // and persist is irrelevant now btw.\n  // since we keep our own state\n  state.color = data;\n\n};\n"
+      "fn": "on.input.in1 = function () {\n  var id = x[state.color];\n\n  if (!state[id]) state[id] = {};\n\n  state[id].out1 = data;\n\n  if (Object.keys(state[id]).length === 2) {\n\n    // send them out in correct pairs.\n    output(state[id]);\n\n    // delete state[id];\n  }\n};\n\non.input.in2 = function () {\n\n  var id = x[state.color];\n\n  if (!state[id]) state[id] = {};\n\n  state[id].out2 = data;\n\n  if (Object.keys(state[id]).length === 2) {\n\n    // send them out in correct pairs.\n    output(state[id]);\n\n    // delete state[id];\n  }\n};\n\non.input.color = function () {\n  // TODO: I want this logic just be handled the\n  // default way and not having to define this.\n  // problem is that context doesn't work now\n  // and persist is irrelevant now btw.\n  // since we keep our own state\n  state.color = data;\n\n};\n"
     },
     {
       "ports": {
@@ -85,9 +86,10 @@
       },
       "type": "async",
       "description": "Collect Chi 2",
+      "title": "Collect 2",
       "ns": "chi",
       "name": "collect2",
-      "fn": "on.input.in1 = function() {\n  var id = x[state.gid];\n\n  if(!state[id]) state[id] = {};\n\n  state[id].out1 = data;\n\n  if(Object.keys(state[id]).length === 2) {\n\n    // send them out in correct pairs.\n    output(state[id]);\n\n    // delete state[id];\n  }\n};\n\non.input.in2 = function() {\n\n  var id = x[state.gid];\n\n  if(!state[id]) state[id] = {};\n\n  state[id].out2 = data;\n\n  if(Object.keys(state[id]).length === 2) {\n\n    // send them out in correct pairs.\n    output(state[id]);\n\n    // delete state[id];\n  }\n};\n\non.input.xin = function() {\n  if(!data.complete) {\n    state.gid = data.gid;\n    state.complete = false;\n  } else {\n    state.complete = true;\n    state.l = data.items.length;\n  }\n};\n"
+      "fn": "on.input.in1 = function () {\n  var id = x[state.gid];\n\n  if (!state[id]) state[id] = {};\n\n  state[id].out1 = data;\n\n  if (Object.keys(state[id]).length === 2) {\n\n    // send them out in correct pairs.\n    output(state[id]);\n\n    // delete state[id];\n  }\n};\n\non.input.in2 = function () {\n\n  var id = x[state.gid];\n\n  if (!state[id]) state[id] = {};\n\n  state[id].out2 = data;\n\n  if (Object.keys(state[id]).length === 2) {\n\n    // send them out in correct pairs.\n    output(state[id]);\n\n    // delete state[id];\n  }\n};\n\non.input.xin = function () {\n  if (!data.complete) {\n    state.gid = data.gid;\n    state.complete = false;\n  } else {\n    state.complete = true;\n    state.l = data.items.length;\n  }\n};\n"
     },
     {
       "ports": {
@@ -116,9 +118,10 @@
         "active": "Creating Chi"
       },
       "description": "Creates Chi",
+      "title": "Create",
       "ns": "chi",
       "name": "create",
-      "fn": "chi.create(input.color, input.in, self);\noutput.out = input.in;\n"
+      "fn": "chi.create(input.color, input. in , self);\noutput.out = input. in ;\n"
     },
     {
       "ports": {
@@ -147,6 +150,7 @@
         "active": "Dropping {{input.color}} Chi"
       },
       "description": "Drop Chi",
+      "title": "Drop",
       "ns": "chi",
       "name": "drop",
       "fn": "// for now, input is disregarded\noutput.out = chi.drop(input.color, self);\n"
@@ -178,6 +182,7 @@
         "active": "Reading Chi"
       },
       "description": "Read Chi",
+      "title": "Read",
       "ns": "chi",
       "name": "read",
       "fn": "// for now, input is disregarded\noutput.out = chi.read(input.color, self);\n"

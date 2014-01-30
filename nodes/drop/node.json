@@ -1,6 +1,7 @@
 {
   "name": "drop",
   "ns": "chi",
+  "title": "Drop",
   "description": "Drop Chi",
   "phrases": {
     "active": "Dropping {{input.color}} Chi"

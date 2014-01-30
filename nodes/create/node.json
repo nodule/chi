@@ -1,6 +1,7 @@
 {
   "name": "create",
   "ns": "chi",
+  "title": "Create",
   "description": "Creates Chi",
   "phrases": {
     "active": "Creating Chi"

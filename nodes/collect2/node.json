@@ -1,6 +1,7 @@
 {
   "name": "collect2",
   "ns": "chi",
+  "title": "Collect 2",
   "description": "Collect Chi 2",
   "type": "async",
   "phrases": {

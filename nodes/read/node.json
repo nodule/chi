@@ -1,6 +1,7 @@
 {
   "name": "read",
   "ns": "chi",
+  "title": "Read",
   "description": "Read Chi",
   "phrases": {
     "active": "Reading Chi"

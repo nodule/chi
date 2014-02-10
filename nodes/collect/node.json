@@ -3,7 +3,7 @@
   "ns": "chi",
   "title": "Collect 2",
   "description": "Collect Chi 2",
-  "type": "async",
+  "async": "true",
   "phrases": {
     "active": "Collecting"
   },

@@ -96,32 +96,31 @@
         "input": {
           "in": {
             "title": "Input",
-            "type": "any"
-          },
-          "color": {
-            "title": "Color",
-            "type": "any"
+            "type": "array"
           }
         },
         "output": {
           "out": {
             "title": "out",
             "type": "any"
+          },
+          "xout": {
+            "title": "Xout",
+            "type": "array"
           }
         }
       },
       "expose": [
-        "chi",
-        "self"
+        "chi"
       ],
       "phrases": {
         "active": "Creating Chi"
       },
-      "description": "Creates Chi",
+      "description": "Will accept an array and send them out as single items, xout contains the group information, which must be connected to a receiving x<port>",
       "title": "Create",
       "ns": "chi",
       "name": "create",
-      "fn": "chi.create(input.color, input. in , self);\noutput.out = input. in ;\n"
+      "fn": "on.input.in = function () {\n\n  var g = chi.group('xout', output);\n\n  for(var i = 0; i < data.length; i++) {\n    output({\n      out: data[i]\n    }, g.item());\n  }\n\n  g.done();\n\n};\n"
     },
     {
       "ports": {

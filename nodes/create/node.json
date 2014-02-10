@@ -2,26 +2,26 @@
   "name": "create",
   "ns": "chi",
   "title": "Create",
-  "description": "Creates Chi",
+  "description": "Will accept an array and send them out as single items, xout contains the group information, which must be connected to a receiving x<port>",
   "phrases": {
     "active": "Creating Chi"
   },
-  "expose": ["chi", "self"],
+  "expose": ["chi"],
   "ports": {
     "input": {
       "in": {
         "title": "Input",
-        "type": "any"
-      },
-      "color": {
-        "title": "Color",
-        "type": "any"
+        "type": "array"
       }
     },
     "output": {
       "out": {
         "title": "out",
         "type": "any"
+      },
+      "xout": {
+        "title": "Xout",
+        "type": "array"
       }
     }
   }

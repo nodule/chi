@@ -3,6 +3,7 @@
   "ns": "chi",
   "title": "Create",
   "description": "Will accept an array and send them out as single items, xout contains the group information, which must be connected to a receiving x<port>",
+  "async": true,
   "phrases": {
     "active": "Creating Chi"
   },

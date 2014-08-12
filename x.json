@@ -41,7 +41,7 @@
       "phrases": {
         "active": "Collecting"
       },
-      "type": "async",
+      "async": "true",
       "description": "Collect Chi 2",
       "title": "Collect 2",
       "ns": "chi",
@@ -84,7 +84,7 @@
       "phrases": {
         "active": "Collecting"
       },
-      "type": "async",
+      "async": "true",
       "description": "Collect Chi 2",
       "title": "Collect 2",
       "ns": "chi",
@@ -116,6 +116,7 @@
       "phrases": {
         "active": "Creating Chi"
       },
+      "async": true,
       "description": "Will accept an array and send them out as single items, xout contains the group information, which must be connected to a receiving x<port>",
       "title": "Create",
       "ns": "chi",

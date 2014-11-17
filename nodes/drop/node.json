@@ -6,7 +6,10 @@
   "phrases": {
     "active": "Dropping {{input.color}} Chi"
   },
-  "expose": ["chi", "self"],
+  "expose": [
+    "chi",
+    "self"
+  ],
   "ports": {
     "input": {
       "in": {

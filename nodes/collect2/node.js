@@ -3,7 +3,7 @@ on.input.in1 = function () {
 
   if (!state[id]) state[id] = {};
 
-  state[id].out1 = data;
+  state[id].out1 = input.in1;
 
   if (Object.keys(state[id]).length === 2) {
 
@@ -20,7 +20,7 @@ on.input.in2 = function () {
 
   if (!state[id]) state[id] = {};
 
-  state[id].out2 = data;
+  state[id].out2 = input.in2;
 
   if (Object.keys(state[id]).length === 2) {
 
@@ -32,11 +32,11 @@ on.input.in2 = function () {
 };
 
 on.input.xin = function () {
-  if (!data.complete) {
-    state.gid = data.gid;
+  if (!input.xin.complete) {
+    state.gid = input.xin.gid;
     state.complete = false;
   } else {
     state.complete = true;
-    state.l = data.items.length;
+    state.l = input.xin.items.length;
   }
 };

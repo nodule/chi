@@ -2,9 +2,9 @@ on.input.in = function () {
 
   var g = chi.group('xout', output);
 
-  for(var i = 0; i < data.length; i++) {
+  for(var i = 0; i < input.in.length; i++) {
     output({
-      out: data[i]
+      out: input.in[i]
     }, g.item());
   }
 

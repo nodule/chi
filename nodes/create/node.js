@@ -4,7 +4,7 @@ on.input.in = function () {
 
   for(var i = 0; i < $.in.length; i++) {
     output({
-      out: $.in[i]
+      out: $.create($.in[i])
     }, g.item());
   }
 

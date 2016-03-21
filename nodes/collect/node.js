@@ -3,7 +3,7 @@ on.input.in1 = function () {
 
   if (!state[id]) state[id] = {};
 
-  state[id].out1 = $.in1;
+  state[id].out1 = $.get('in1');
 
   if (Object.keys(state[id]).length === 2) {
 
@@ -20,7 +20,7 @@ on.input.in2 = function () {
 
   if (!state[id]) state[id] = {};
 
-  state[id].out2 = $.in2;
+  state[id].out2 = $.get('in2');
 
   if (Object.keys(state[id]).length === 2) {
 

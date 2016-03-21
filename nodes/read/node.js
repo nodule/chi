@@ -1,2 +1,2 @@
 // for now, input is disregarded
-output.out = chi.read($.color, self);
+output.out = $.create(chi.read($.color, self));

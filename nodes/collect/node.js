@@ -3,7 +3,7 @@ on.input.in1 = function () {
 
   if (!state[id]) state[id] = {};
 
-  state[id].out1 = input.in1;
+  state[id].out1 = $.in1;
 
   if (Object.keys(state[id]).length === 2) {
 
@@ -20,7 +20,7 @@ on.input.in2 = function () {
 
   if (!state[id]) state[id] = {};
 
-  state[id].out2 = input.in2;
+  state[id].out2 = $.in2;
 
   if (Object.keys(state[id]).length === 2) {
 
@@ -37,6 +37,6 @@ on.input.color = function () {
   // problem is that context doesn't work now
   // and persist is irrelevant now btw.
   // since we keep our own state
-  state.color = input.color;
+  state.color = $.color;
 
 };
